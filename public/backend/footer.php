@@ -37,7 +37,7 @@
                 </ul>
             </div>
             <div>
-                <h3 class="footer_title">Social M</h3>
+                <h3 class="footer_title">Follow us</h3>
                 <ul class="footer_links">
                     <li><a href="https://facebook.com" target="_blank" class="footer_link">Facebook</a></li>
                     <li><a href="https://www.instagram.com" target="_blank" class="footer_link">Instagram</a></li>
