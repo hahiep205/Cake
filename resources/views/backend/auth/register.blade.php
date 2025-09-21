@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    <?php include public_path('backend/header.php'); ?>
+    @include('backend.auth.header');
 
     <section id="log" class="section_log log">
         <div class="container_log">
@@ -16,12 +16,12 @@
             <form action="/register" method="POST" class="log_form">
                 @csrf
                 <div class="form_group">
-                    <label for="email">Email:</label><br>
-                    <input type="email" id="email" name="email" required>
+                    <label for="name">Name:</label><br>
+                    <input type="name" id="name" name="name" required>
                 </div>
                 <div class="form_group">
-                    <label for="username">Username:</label><br>
-                    <input type="username" id="username" name="username" required>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div class="form_group">
                     <label for="password">Password:</label><br>
@@ -33,7 +33,7 @@
         </div>
     </section>
 
-    <?php include public_path('backend/footer.php'); ?>
+    @include('backend.auth.footer');
 
 </body>
 </html>

@@ -8,13 +8,13 @@
 </head>
 <body>
 
-    @include('backend.auth.header');
+    @include('backend.auth.header')
 
     <div class="container container_dashboard">
-        <h1>This is index page.</h1>
+        <h1>This is dashboard page.</h1>
     </div>
 
-    @include('backend.auth.footer');
+    @include('backend.auth.footer')
 
 </body>
 </html>

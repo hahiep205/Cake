@@ -15,9 +15,15 @@
                 <li class="nav_item">
                     <a href="/#recently" class="nav_link">Recently</a>
                 </li>
+                @if(Auth::check())
                 <li class="nav_item">
-                    <a href="login" class="nav_link">Login</a>
+                    <span class="nav_link">{{ auth()->user()->name }} - <a href="{{ route('logout') }}" class="nav_link">Logout</a></span>
                 </li>
+                @else
+                <li class="nav_item">
+                    <a href="/login" class="nav_link">Login</a>
+                </li>
+                @endif
             </ul>
         </div>
     </nav>
