@@ -10,15 +10,15 @@
 
     @include('backend.auth.header')
     
-    <section class="session_profile">
+    <section class="section section_profile">
         <div class="container_log">
             <h2 class="section_title">User Profile</h2>
-            <div class="profile_content">
-                <p><strong>Name:</strong> {{ auth()->user()->name }}</p>
-                <p><strong>Email:</strong> {{ auth()->user()->email }}</p>
-                <p><strong>Phone Number:</strong> {{ auth()->user()->phone }}</p>
-                <p><strong>Address:</strong> {{ auth()->user()->Adress }}</p>
-            </div>
+                <div class="profile_content">
+                    <p><strong>Name:</strong> {{ auth()->user()->name }}</p>
+                    <p><strong>Email:</strong> {{ auth()->user()->email }}</p>
+                    <p><strong>Phone Number:</strong> {{ auth()->user()->phone }}</p>
+                    <p><strong>Address:</strong> {{ auth()->user()->Adress }}</p>
+                </div>     
         </div>
     </section>    
 

@@ -1,7 +1,7 @@
 <footer class="footer">
     <div class="footer_container container grid">
         <div>
-            <a class="logo" href="#">CAKE</a>
+            <a class="logo" href="dashboard">CAKE</a>
             <p>
                 Order now..!
             </p>
@@ -48,7 +48,7 @@
     </div>
     <div class="footer_info container">
         <span class="footer_copy">
-            &#169; 1945 CAKE. All rights reserved.
+            &#169; 2026 CAKE Order.
         </span>
     </div>
 </footer>

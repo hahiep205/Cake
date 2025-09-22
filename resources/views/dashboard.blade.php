@@ -66,37 +66,19 @@
         <div class="container">
             <h2 class="section_title">Popular Items</h2>
             <div class="popular_grid">
-                <div class="popular_item">
-                    <div class="popular_image"></div>
-                    <h3 class="popular_name">This is Cake</h3>
-                    <p class="popular_description">Content...</p>
-                    <span class="popular_price">$99.00</span>
-                </div>
-                <div class="popular_item">
-                    <div class="popular_image"></div>
-                    <h3 class="popular_name">This is Cake</h3>
-                    <p class="popular_description">Content...</p>
-                    <span class="popular_price">$99.00</span>
-                </div>
-                <div class="popular_item">
-                    <div class="popular_image"></div>
-                    <h3 class="popular_name">This is Cake</h3>
-                    <p class="popular_description">Content...</p>
-                    <span class="popular_price">$99.00</span>
-                </div>
-                <div class="popular_item">
-                    <div class="popular_image"></div>
-                    <h3 class="popular_name">This is Cake</h3>
-                    <p class="popular_description">Content...</p>
-                    <span class="popular_price">$99.00</span>
-                </div>
-                <div class="popular_item">
-                    <div class="popular_image"></div>
-                    <h3 class="popular_name">This is Cake</h3>
-                    <p class="popular_description">Content...</p>
-                    <span class="popular_price">$99.00</span>
-                </div>
-            </div>
+                @if(isset($products) && $products->count() > 0)
+                    @foreach($products as $product)
+                    <div class="popular_item">
+                        <div class="popular_image">
+                            <a href="#popular"><img src="{{ asset('backend/imgs/' . $product->image) }}" alt="{{ $product->product_name }}"></a>
+                        </div>
+                        <a href="#popular" style="text-decoration: none; color: #000000"><h3 class="popular_name">{{ $product->product_name }}</h3></a>
+                        <p class="popular_description">{{ $product->description }}</p>
+                        <span class="popular_price">${{ number_format($product->price, 2) }}</span>
+                    </div>
+                    @endforeach
+                @endif
+            </div>  
         </div>
     </section>
 
@@ -105,28 +87,21 @@
         <div class="container">
             <h2 class="section_title">Recently Added</h2>
             <div class="recently_content">
-                <div class="recently_item">
-                    <div class="recently_image"></div>
-                    <div class="recently_info">
-                        <h3 class="recently_name">This is New Cake</h3>
-                        <p class="recently_description">
-                            Conten...
-                        </p>
-                        <span class="recently_price">$124.00</span>
-                        <span class="recently_badge">New!</span>
+                @if(isset($recentProducts) && $recentProducts->count() > 0)
+                @foreach($recentProducts as $product)
+                    <div class="recently_item">
+                        <div class="recently_image">
+                            <a href="#recently"><img src="{{ asset('backend/imgs/' . $product->image) }}" alt="{{ $product->product_name }}"></a>
+                        </div>
+                        <div class="recently_info">
+                            <a href="#recently" style="text-decoration: none; color: #000000"><h3 class="recently_name">{{ $product->product_name }}</h3></a>
+                            <p class="recently_description">{{ $product->description }}</p>
+                            <span class="recently_price">${{ number_format($product->price, 2) }}</span>
+                            <span class="recently_badge">New!</span>
+                        </div>
                     </div>
-                </div>
-                <div class="recently_item">
-                    <div class="recently_image"></div>
-                    <div class="recently_info">
-                        <h3 class="recently_name">This is New Cake</h3>
-                        <p class="recently_description">
-                            Conten...
-                        </p>
-                        <span class="recently_price">$119.00</span>
-                        <span class="recently_badge">New!</span>
-                    </div>
-                </div>
+                    @endforeach
+                @endif
             </div>
         </div>
     </section>

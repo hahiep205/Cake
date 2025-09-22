@@ -14,11 +14,9 @@ use App\Http\Controllers\Backend\AuthController;
 |
 */
 
-Route::get('/', function () {
-    return view('index');})->name('index');
+Route::get('/', [AuthController::class, 'dashboard'])->name('dashboard');
 
-Route::get('dashboard', function () {
-    return view('dashboard');})->name('dashboard')->middleware('auth');
+Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
 Route::get('login', [AuthController::class, 'login'])->name('auth.login');
 
