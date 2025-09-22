@@ -31,6 +31,13 @@ Route::post('register', [AuthController::class, 'registered'])->name('auth.regis
 Route::get('profile', function () {
     return view('profile');})->name('profile')->middleware('auth');
 
+Route::get('profile_edit', function () {
+    return view('profile_edit');})->name('profile_edit')->middleware('auth');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
+    Route::put('/profile/update', [AuthController::class, 'updateProfile'])->name('profile.update');
+});
 
 
 

@@ -106,4 +106,27 @@ class AuthController extends Controller
         return view('profile');
     }
 
+    public function profile_edit()
+    {
+        return view('profile_edit');
+    }
+
+    public function updateProfile(Request $request)
+    {
+        $request->validate([
+            'name' => 'required|string|max:255',
+            'phone' => 'nullable|string|max:20',
+            'address' => 'nullable|string|max:500',
+        ]);
+
+        $user = auth()->user();
+        $user->update([
+            'name' => $request->name,
+            'phone' => $request->phone,
+            'address' => $request->address,
+        ]);
+
+        return redirect()->route('profile')->with('success', 'Profile updated successfully!');
+    }
+
 }
