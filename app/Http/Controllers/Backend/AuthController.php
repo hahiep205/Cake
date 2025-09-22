@@ -90,4 +90,10 @@ class AuthController extends Controller
         
         return true;
     }
+
+    public function profile()
+    {
+        return view('backend.auth.profile');
+    }
+
 }

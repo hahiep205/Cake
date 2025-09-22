@@ -30,6 +30,9 @@ Route::get('register', [AuthController::class, 'register'])->name('auth.register
 
 Route::post('register', [AuthController::class, 'registered'])->name('auth.registered');
 
+Route::get('profile', function () {
+    return view('profile');})->name('profile')->middleware('auth');
+
 
 
 

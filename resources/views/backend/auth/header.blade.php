@@ -17,7 +17,8 @@
                 </li>
                 @if(Auth::check())
                 <li class="nav_item">
-                    <span class="nav_link">{{ auth()->user()->name }} - <a href="{{ route('logout') }}" class="nav_link">Logout</a></span>
+                    <a href="{{ route('profile') }}" class="nav_link">{{ auth()->user()->name }}</a> - 
+                    <a href="{{ route('logout') }}" class="nav_link">Logout</a>
                 </li>
                 @else
                 <li class="nav_item">

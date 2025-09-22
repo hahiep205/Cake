@@ -8,7 +8,7 @@
 </head>
 <body>
 
-    @include('backend.auth.header');
+    @include('backend.auth.header')
 
     <section id="log" class="section_log log">
         <div class="container_log">
@@ -33,7 +33,7 @@
         </div>
     </section>
 
-    @include('backend.auth.footer');
+    @include('backend.auth.footer')
 
 </body>
 </html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CAKE Order</title>
+    <link rel="stylesheet" href="{{asset('backend/style.css')}}">
+</head>
+<body>
+
+    @include('backend.auth.header')
+    
+    <section class="session_profile">
+        <div class="container_log">
+            <h2 class="section_title">User Profile</h2>
+            <div class="profile_content">
+                <p><strong>Name:</strong> {{ auth()->user()->name }}</p>
+                <p><strong>Email:</strong> {{ auth()->user()->email }}</p>
+                <p><strong>Phone Number:</strong> {{ auth()->user()->phone }}</p>
+                <p><strong>Address:</strong> {{ auth()->user()->Adress }}</p>
+            </div>
+        </div>
+    </section>    
+
+    @include('backend.auth.footer')
+	
+</body>
+</html>
