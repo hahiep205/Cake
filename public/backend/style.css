@@ -15,6 +15,7 @@ body {
 .container {
     max-width: 1024px;
     margin: 0 auto;
+    padding: 1rem;
 }
 
 .container_dashboard {
@@ -56,6 +57,7 @@ body {
     align-items: center;
 }
 
+
 .nav_list {
     display: flex;
     flex-direction: column;
@@ -79,7 +81,7 @@ body {
 }
 
 .nav_link {
-    padding: 0.5rem 0.7rem;
+    padding: 0.3rem 0.3rem;
     border-radius: 4px;
     position: relative;
 }
@@ -124,7 +126,7 @@ body {
 }
 
 .nav_link {
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0.5rem;
     border-radius: 4px;
     position: relative;
 }
@@ -141,7 +143,7 @@ body {
 
 /* Home */
 .home {
-    background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+    background: linear-gradient(124deg, #fff3e0, #ffe0b2);
     display: flex;
     align-items: center;
     height: 100vh;
@@ -168,7 +170,7 @@ body {
 .home_button {
     display: inline-block;
     padding: 1rem 2rem;
-    background: #ff6b35;
+    background: #fb6f3c;
     color: white;
     text-decoration: none;
     border-radius: 8px;
@@ -178,7 +180,7 @@ body {
 
 .home_button:hover {
     background: #e55a2b;
-    transform: translateY(-2px);
+    transform: translateX(5px);
 }
 
 /* About */
@@ -321,6 +323,16 @@ body {
     gap: 0.25rem;
 }
 
+.footer_followus {
+    display: inline;
+}
+
+.footer_icon {
+    font-size: 24px;
+    padding-right: 0.35rem;
+    color: #222;
+}
+
 .footer_link {
     color: #222;
     text-decoration: none;
@@ -334,6 +346,17 @@ body {
 .footer_copy {
     font-size: 14px;
     color: #888;
+}
+
+.footer a{
+    line-height: 150%;
+    font-family: 'Inter', sans-serif;
+    transition: 0.3s all;
+    display: inline-block;
+}
+
+.footer a:hover {
+    transform: translateX(5px);
 }
 
 /*   Login & Register   */
@@ -404,31 +427,31 @@ body {
 .profile_button {
     margin: 1.5rem 0;
     padding: 0.5rem 1rem;
-    background: #ff6b35;
+    background: #5ba4fc;
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    width: 85%;
+    width: 100%;
 }
 
 .profile_button_confirm {
     margin: 1.5rem 0;
     padding: 0.5rem 1rem;
-    background: #4CAF50;
+    background: #53d769;
     color: white;
     border: none;
     border-radius: 4px;
     font-size: 1rem;
     cursor: pointer;
     transition: background 0.3s ease;
-    width: 85%;
+    width: 100%;
 }
 
 .profile_button_confirm:hover {
-    background: #45a049;
+    background: #46c263;
 }
 
 .profile {
@@ -440,11 +463,11 @@ body {
 }
 
 .profile_button:hover {
-    background: #e55a2b;
+    background: #5897ee;
 }
 
 .profile_content {
-    padding-left: 3.5rem;
+    padding: 0 3rem;
     line-height: 2;
 }
 
@@ -454,7 +477,7 @@ body {
 
 /* Form Input */
 input[type="text"] {
-    width: 85%;
+    width: 100%;
     padding: 8px 10px;
     border: 2px solid #ddd;
     border-radius: 8px;
@@ -469,7 +492,7 @@ input[type="text"]:focus {
 }
 
 /* Media Queries */
-@media (min-width: 767px) {
+@media (min-width: 100px) {
     .nav_list {
         flex-direction: row;
         gap: 1.5rem;
@@ -482,9 +505,15 @@ input[type="text"]:focus {
     .footer_content {
         grid-template-columns: repeat(4, 1fr);
     }
+
+    .menu-icon {
+        display: none;
+    }
+
+
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 700px) {
     .footer_container {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -494,9 +523,14 @@ input[type="text"]:focus {
         justify-content: space-between;
         margin-top: 3rem;
     }
+
+    .menu-icon {
+        display: none;
+    }
 }
 
-@media (max-width: 767px) {
+/* Width <= 767px */
+@media (max-width: 699px) {
     .home_title {
         font-size: 2rem;
     }
@@ -510,9 +544,26 @@ input[type="text"]:focus {
         text-align: center;
     }
     
-    .recently_image {
-        width: 200px;
-        margin: 0 auto;
+    .recently_image img {
+        width: 261px;
+        max-height: 321px;
+        border-radius: 8px;
+    }
+
+    .popular_image img {
+        width: 261px;
+        max-height: 321px;
+        border-radius: 8px;
+    }
+
+    .nav_list {
+    display: none;
+    }
+
+    .menu-icon {
+        display: block;
+        font-size: 20px;
+        font-weight: bold;
     }
 
 }

@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAKE Order</title>
+    <title>CAKE - Welcome {{ auth()->user()->name }}!</title>
     <link rel="stylesheet" href="{{asset('backend/style.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
@@ -12,7 +13,7 @@
     
     <section class="section section_profile">
         <div class="container_log profile">
-            <h2 class="section_title">User Profile</h2>
+            <h2 class="section_title"><i class="ri-id-card-line"></i> User Profile</h2>
 
                 <div class="profile_content">
                     <p><strong>Name:</strong> {{ auth()->user()->name }}</p>

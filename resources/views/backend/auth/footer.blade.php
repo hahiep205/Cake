@@ -38,10 +38,16 @@
             </div>
             <div>
                 <h3 class="footer_title">Follow us</h3>
-                <ul class="footer_links">
-                    <li><a href="https://facebook.com" target="_blank" class="footer_link">Facebook</a></li>
-                    <li><a href="https://www.instagram.com" target="_blank" class="footer_link">Instagram</a></li>
-                    <li><a href="https://www.youtube.com" target="_blank" class="footer_link">YouTube</a></li>
+                <ul class="footer_followus footer_links">
+                    <a href="https://www.facebook.com/" target="_blank" class="footer_social-link" style="text-decoration: none;">
+                        <i class="ri-facebook-box-line footer_icon"></i>
+                    </a>
+                    <a href="https://www.instagram.com/" target="_blank" class="footer_social-link" style="text-decoration: none;">
+                        <i class="ri-instagram-line footer_icon"></i>
+                    </a>
+                    <a href="https://www.youtube.com/" target="_blank" class="footer_social-link" style="text-decoration: none;">
+                        <i class="ri-youtube-line footer_icon"></i>
+                    </a>
                 </ul>
             </div>
         </div>

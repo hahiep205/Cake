@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CAKE Order</title>
+    <title>CAKE - Edit Profile</title>
     <link rel="stylesheet" href="{{asset('backend/style.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
@@ -12,23 +13,7 @@
     
     <section class="section section_profile">
         <div class="container_log profile">
-            <h2 class="section_title">Profile Edit</h2>
-
-            @if(session('success'))
-                <div class="alert alert-success">
-                    {{ session('success') }}
-                </div>
-            @endif
-
-            @if($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
+            <h2 class="section_title"><i class="ri-user-settings-line"></i> Profile Edit</h2>
 
             <div class="profile_content">
                 <form action="{{ route('profile.update') }}" method="POST" class="profile_form">
@@ -64,6 +49,6 @@
     </section>    
 
     @include('backend.auth.footer')
-	
+
 </body>
 </html>

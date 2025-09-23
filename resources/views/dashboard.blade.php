@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CAKE Order</title>
     <link rel="stylesheet" href="{{asset('backend/style.css')}}">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 <body>
 
@@ -32,28 +33,24 @@
                 <div class="about_text">
                     <p>
                         Our CAKE has been serving the community for over 500 years with traditional recipes 
-                        passed down through generations. We believe in using only the finest ingredients 
-                        to create memorable experiences for our customers.
+                        passed down through generations.
                     </p>
                 </div>
                 <div class="about_text">
                     <p>
                         Our CAKE has been serving the community for over 500 years with traditional recipes 
-                        passed down through generations. We believe in using only the finest ingredients 
-                        to create memorable experiences for our customers.
+                        passed down through generations.
                     </p>
                 </div>
 				<div class="about_text">
                     <p>
                         Our CAKE has been serving the community for over 500 years with traditional recipes 
-                        passed down through generations. We believe in using only the finest ingredients 
-                        to create memorable experiences for our customers.
+                        passed down through generations.
                     </p>
                 </div>
 				<div class="about_text">
                     <p>
-                        Our CAKE has been serving the community for over 500 years with traditional recipes 
-                        passed down through generations. We believe in using only the finest ingredients 
+                        We believe in using only the finest ingredients 
                         to create memorable experiences for our customers.
                     </p>
                 </div>

@@ -18,6 +18,8 @@ Route::get('/', [AuthController::class, 'dashboard'])->name('dashboard');
 
 Route::get('dashboard', [AuthController::class, 'dashboard'])->name('dashboard');
 
+Route::get('cart', [AuthController::class, 'cart'])->name('cart');
+
 Route::get('login', [AuthController::class, 'login'])->name('auth.login');
 
 Route::post('login', [AuthController::class, 'logined'])->name('auth.logined');
@@ -38,6 +40,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/profile', [AuthController::class, 'profile'])->name('profile');
     Route::put('/profile/update', [AuthController::class, 'updateProfile'])->name('profile.update');
 });
+
+Route::get('admin', [AuthController::class, 'admin'])->name('admin');
 
 
 

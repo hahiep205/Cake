@@ -10,7 +10,7 @@ use App\Models\Product;
 
 class AuthController extends Controller
 {
-        public function dashboard()
+    public function dashboard()
     {
         $products = Product::getProductsFromOneToFive();
 
@@ -24,7 +24,7 @@ class AuthController extends Controller
         return view('backend.auth.login');
     }
 
-        public function logined(Request $request)
+    public function logined(Request $request)
     {
         if (auth()->attempt($request->only('email', 'password'))) {
 
@@ -35,7 +35,7 @@ class AuthController extends Controller
             ]);
 
             if (auth()->user()->isAdmin()) {
-                return redirect()->route('auth.admin');
+                return redirect()->route('dashboard');
             } else {
                 return redirect()->route('dashboard');
             }
@@ -127,6 +127,16 @@ class AuthController extends Controller
         ]);
 
         return redirect()->route('profile')->with('success', 'Profile updated successfully!');
+    }
+
+    public function cart()
+    {
+        return view('cart');
+    }
+
+    public function admin()
+    {
+        return view('backend.auth.admin');
     }
 
 }
