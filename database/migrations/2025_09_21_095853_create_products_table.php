@@ -13,6 +13,10 @@ return new class extends Migration
      */
     public function up()
     {
+
+        /*
+        *** Tạo bảng sản phẩm products.
+        */
         Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('product_name');

@@ -13,6 +13,7 @@
 
     <section id="admin" class="section admin">
         <div class="container">
+            
             <h2 class="section_title">This is admin page.</h2>
             
         </div>

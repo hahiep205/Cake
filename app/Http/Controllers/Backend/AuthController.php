@@ -10,6 +10,10 @@ use App\Models\Product;
 
 class AuthController extends Controller
 {
+
+    /*
+    *** Gọi 2 func để hiển thị data cake lên web mỗi khi mở dashboard.
+    */
     public function dashboard()
     {
         $products = Product::getProductsFromOneToFive();
@@ -19,11 +23,17 @@ class AuthController extends Controller
         return view('dashboard', compact('products', 'recentProducts'));
     }
 
+    /*
+    *** Func trả về page login
+    */
     public function login()
     {
         return view('backend.auth.login');
     }
 
+    /*
+    *** Func check account và tạo session ròi redirect tới route với role tương ứng.
+    */
     public function logined(Request $request)
     {
         if (auth()->attempt($request->only('email', 'password'))) {
@@ -35,7 +45,7 @@ class AuthController extends Controller
             ]);
 
             if (auth()->user()->isAdmin()) {
-                return redirect()->route('dashboard');
+                return redirect()->route('admin');
             } else {
                 return redirect()->route('dashboard');
             }
@@ -43,6 +53,9 @@ class AuthController extends Controller
         return redirect()->back()->withErrors(['email' => 'Email or password is incorrect.']);
     }
 
+    /*
+    *** Func logout, xóa session token khi logout.
+    */
     public function logout()
     {
         if (auth()->check()) {
@@ -54,11 +67,17 @@ class AuthController extends Controller
         return redirect()->route('dashboard');
     }
 
+    /*
+    *** Func trả về page register.
+    */
     public function register()
     {
         return view('backend.auth.register');
     }
 
+    /*
+    *** Func tạo account rồi tự động login, tạo session, redirect tới dashboard. 
+    */
     public function registered(Request $request)
     {
         $request->validate([
@@ -85,11 +104,17 @@ class AuthController extends Controller
         return redirect()->route('dashboard');
     }
 
+    /*
+    *** Func tạo session, dùng khi login.
+    */
     private function generateSessionCode()
     {
         return Str::random(40);
     }
 
+    /*
+    *** Func check xem session có valid ko.
+    */
     public function checkSession()
     {
         $sessionCode = session('custom_session_code');
@@ -101,16 +126,25 @@ class AuthController extends Controller
         return true;
     }
 
+    /*
+    *** Func return trang profile.
+    */
     public function profile()
     {
         return view('profile');
     }
 
+    /*
+    *** Function return profile edit.
+    */
     public function profile_edit()
     {
         return view('profile_edit');
     }
 
+    /*
+    *** Func update info cho user.
+    */
     public function updateProfile(Request $request)
     {
         $request->validate([
@@ -129,11 +163,17 @@ class AuthController extends Controller
         return redirect()->route('profile')->with('success', 'Profile updated successfully!');
     }
 
+    /*
+    *** Func trả về trang cart.
+    */
     public function cart()
     {
         return view('cart');
     }
 
+    /*
+    *** Func return admin.
+    */
     public function admin()
     {
         return view('backend.auth.admin');

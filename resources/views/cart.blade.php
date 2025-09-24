@@ -13,6 +13,7 @@
     
     <section class="section section_profile">
         <div class="container_log profile">
+            
             <h2 class="section_title"><i class="ri-shopping-cart-line"></i> Shopping Cart</h2>
 
             <p class="section_title">Your Cart is Empty!</p>

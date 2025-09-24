@@ -13,10 +13,12 @@
     
     <section class="section section_profile">
         <div class="container_log profile">
+
             <h2 class="section_title"><i class="ri-user-settings-line"></i> Profile Edit</h2>
 
             <div class="profile_content">
                 <form action="{{ route('profile.update') }}" method="POST" class="profile_form">
+
                     @csrf
                     @method('PUT')
                     
@@ -43,10 +45,11 @@
                     <div class="profile_buttons">
                         <button type="submit" class="profile_button_confirm">Update Profile</button>
                     </div>
+
                 </form>
             </div>
         </div>
-    </section>    
+    </section>
 
     @include('backend.auth.footer')
 

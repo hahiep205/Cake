@@ -1,12 +1,15 @@
 <footer class="footer">
     <div class="footer_container container grid">
+        
         <div>
             <a class="logo" href="dashboard">CAKE</a>
             <p>
                 Order now..!
             </p>
         </div>
+
         <div class="footer_content">
+    
             <div>
                 <h3 class="footer_title">Main Menu</h3>
                 <ul class="footer_links">
@@ -16,6 +19,7 @@
                     <li><a href="#footer" class="footer_link">Events</a></li>
                 </ul>
             </div>
+
             <div>
                 <h3 class="footer_title">Information</h3>
                 <ul class="footer_links">
@@ -25,6 +29,7 @@
                     <li><a href="#footer" class="footer_link">Reservation</a></li>
                 </ul>
             </div>
+
             <div>
                 <h3 class="footer_title">Address</h3>
                 <ul class="footer_links">
@@ -36,6 +41,7 @@
                     </li>
                 </ul>
             </div>
+
             <div>
                 <h3 class="footer_title">Follow us</h3>
                 <ul class="footer_followus footer_links">
@@ -50,11 +56,14 @@
                     </a>
                 </ul>
             </div>
+
         </div>
     </div>
+
     <div class="footer_info container">
         <span class="footer_copy">
             &#169; 2026 CAKE Order.
         </span>
     </div>
+
 </footer>
