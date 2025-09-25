@@ -72,6 +72,9 @@
                         <a href="#popular" style="text-decoration: none; color: #000000"><h3 class="popular_name">{{ $product->product_name }}</h3></a>
                         <p class="popular_description">{{ $product->description }}</p>
                         <span class="popular_price">${{ number_format($product->price, 2) }}</span>
+                        <button class="add_to_cart_button">
+                            <i class="ri-shopping-cart-line"></i>
+                        </button>
                     </div>
                     @endforeach
                 @endif
@@ -94,6 +97,9 @@
                             <a href="#recently" style="text-decoration: none; color: #000000"><h3 class="recently_name">{{ $product->product_name }}</h3></a>
                             <p class="recently_description">{{ $product->description }}</p>
                             <span class="recently_price">${{ number_format($product->price, 2) }}</span>
+                            <button class="add_to_cart_button">
+                                <i class="ri-shopping-cart-line"></i>
+                            </button>
                             <span class="recently_badge">New!</span>
                         </div>
                     </div>
