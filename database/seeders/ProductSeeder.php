@@ -20,6 +20,7 @@ class ProductSeeder extends Seeder
         *** Tạo product mới, seed lên table products ở database.
         */
         Product::create([
+            'product_id' => 'NMC-2509',
             'product_name' => 'Nama Matcha Chocolate',
             'price' => 25.99,
             'stock' => 10,
@@ -28,6 +29,7 @@ class ProductSeeder extends Seeder
         ]);
 
         Product::create([
+            'product_id' => 'OLC-2509',
             'product_name' => 'Olong Longan Cake',
             'price' => 22.99,
             'stock' => 15,
@@ -36,6 +38,7 @@ class ProductSeeder extends Seeder
         ]);
 
         Product::create([
+            'product_id' => 'PBC-2509',
             'product_name' => 'Pudding Blueberry Cake',
             'price' => 22.99,
             'stock' => 15,
@@ -44,6 +47,7 @@ class ProductSeeder extends Seeder
         ]);
 
         Product::create([
+            'product_id' => 'CCC-2509',
             'product_name' => 'Chestnut Cheese Cake',
             'price' => 22.99,
             'stock' => 15,
@@ -52,6 +56,7 @@ class ProductSeeder extends Seeder
         ]);
 
         Product::create([
+            'product_id' => 'COSIK-2509',
             'product_name' => 'Choco Oreo Salty Ice Cake',
             'price' => 22.99,
             'stock' => 15,
@@ -60,6 +65,7 @@ class ProductSeeder extends Seeder
         ]);
 
         Product::create([
+            'product_id' => 'PTLCC-2509',
             'product_name' => 'Pink Tea & Lemon Cheese Cake',
             'price' => 22.99,
             'stock' => 15,
@@ -68,6 +74,7 @@ class ProductSeeder extends Seeder
         ]);
 
         Product::create([
+            'product_id' => 'BVDC-2509',
             'product_name' => 'Blueberry Vanilla Dream Cake',
             'price' => 22.99,
             'stock' => 15,

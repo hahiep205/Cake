@@ -1,7 +1,7 @@
 <header class="header">
     <nav class="nav container">
 
-        <a class="logo" href="/dashboard">CAKE</a>
+        <a class="logo" href="/dashboard"> CAKE </a>
 
         <div class="nav_menu">
 
